@@ -105,6 +105,15 @@ angular.module('starter', ['ionic', 'starter.controllers'])
       }
     })
 
+    .state('app.tabs', { // don't need this.
+      url: '/tabs',
+      views: {
+        'menuContent': {
+          templateUrl: 'templates/tabs.html'
+        }
+      }
+    })
+
     .state('app.login', { // don't need this.
       url: '/login',
       views: {
