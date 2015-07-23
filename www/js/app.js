@@ -32,24 +32,61 @@ angular.module('starter', ['ionic', 'starter.controllers'])
     controller: 'AppCtrl'
   })
 
-  .state('app.search', {
-    url: '/search',
+  .state('app.profile', {
+    url: '/profile',
     views: {
       'menuContent': {
-        templateUrl: 'templates/search.html'
+        templateUrl: 'templates/profile.html'
       }
     }
   })
 
-  .state('app.browse', {
-      url: '/browse',
-      views: {
-        'menuContent': {
-          templateUrl: 'templates/browse.html'
-        }
+  .state('app.adviceGiven', {
+    url: '/adviceGiven',
+    views: {
+      'menuContent': {
+        templateUrl: 'templates/advice_given.html'
       }
-    })
-    .state('app.playlists', {
+    }
+  })
+
+  .state('app.adviceReceived', {
+    url: '/adviceReceived',
+    views: {
+      'menuContent': {
+        templateUrl: 'templates/advice_received.html'
+      }
+    }
+  })
+
+  .state('app.groups', {
+    url: '/groups',
+    views: {
+      'menuContent': {
+        templateUrl: 'templates/groups.html'
+      }
+    }
+  })
+
+  .state('app.locations', {
+    url: '/locations',
+    views: {
+      'menuContent': {
+        templateUrl: 'templates/locations.html'
+      }
+    }
+  })
+
+  .state('app.feedback', {
+    url: '/feedback',
+    views: {
+      'menuContent': {
+        templateUrl: 'templates/feedback.html'
+      }
+    }
+  })
+
+    .state('app.playlists', { // don't need this.
       url: '/playlists',
       views: {
         'menuContent': {
@@ -59,7 +96,25 @@ angular.module('starter', ['ionic', 'starter.controllers'])
       }
     })
 
-  .state('app.single', {
+    .state('app.landing_page', { // don't need this.
+      url: '/landing_page',
+      views: {
+        'menuContent': {
+          templateUrl: 'templates/landing_page.html'
+        }
+      }
+    })
+
+    .state('app.login', { // don't need this.
+      url: '/login',
+      views: {
+        'menuContent': {
+          templateUrl: 'templates/login.html'
+        }
+      }
+    })
+
+  .state('app.single', { // don't need this.
     url: '/playlists/:playlistId',
     views: {
       'menuContent': {
@@ -69,5 +124,5 @@ angular.module('starter', ['ionic', 'starter.controllers'])
     }
   });
   // if none of the above states are matched, use this as the fallback
-  $urlRouterProvider.otherwise('/app/playlists');
+  $urlRouterProvider.otherwise('/app/landing_page');
 });
